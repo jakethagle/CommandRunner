@@ -56,11 +56,3 @@ class CommandRunner(object):
 			ssh {}@{} bash
 			set -e; {}
 		""".format(self.user, self.host, command)
-
-def main():
-	c = CommandRunner("192.168.1.200", "frosty")
-	c = CommandRunner()
-	c.invoke_command("ls")
-
-if __name__ == "__main__":
-	main()
